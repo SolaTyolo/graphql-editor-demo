@@ -1,6 +1,7 @@
 import { GraphQLEditor } from 'graphql-editor';
 import { PassedSchema } from 'graphql-editor/lib/Models';
 import { MainTheme } from 'graphql-editor/lib/gshared/theme/MainTheme';
+import { Export } from './Export'
 
 import React, {
   useEffect,
@@ -14,6 +15,7 @@ export const App = () => {
   };
 
   // load from github raw filepath
+  // export 
   try {
     const gqlEditorSchema: string | null = localStorage.getItem('gqlEditorSchema');
 
@@ -32,14 +34,12 @@ export const App = () => {
     console.log('Schema saved to local storage.');
   }, [gqlEditorSchema]);
 
-  console.log('gqlEditorSchema', gqlEditorSchema);
-
   return (
     <div
       style={{
         flex: 1,
-        width: '100%',
-        height: '100%',
+        width: '100vw',
+        height: '100vh',
         alignSelf: 'stretch',
         display: 'flex',
         position: 'relative',
@@ -50,7 +50,7 @@ export const App = () => {
         schema={gqlEditorSchema}
         theme={MainTheme}
       />
-
+      <Export />
     </div>
   );
 };
