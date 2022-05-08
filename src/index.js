@@ -1,44 +1,17 @@
-import React, { useState } from 'react';
-import { render } from 'react-dom';
-import { GraphQLEditor, PassedSchema } from 'graphql-editor';
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import './index.css';
+import App from './App';
+import reportWebVitals from './reportWebVitals';
 
-const schemas = {
-  pizza: `
-type Query{
-	pizzas: [Pizza!]
-}
-`,
-  pizzaLibrary: `
-type Pizza{
-  name:String;
-}
-`,
-};
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
 
-export const App = () => {
-  const [mySchema, setMySchema] = useState<PassedSchema>({
-    code: schemas.pizza,
-    libraries: schemas.pizzaLibrary,
-  });
-  return (
-    <div
-      style={{
-        flex: 1,
-        width: '100%',
-        height: '100%',
-        alignSelf: 'stretch',
-        display: 'flex',
-        position: 'relative',
-      }}
-    >
-      <GraphQLEditor
-        onSchemaChange={(props) => {
-          setMySchema(props);
-        }}
-        schema={mySchema}
-      />
-    </div>
-  );
-};
-
-render(<App />, document.getElementById('root'));
+// If you want to start measuring performance in your app, pass a function
+// to log results (for example: reportWebVitals(console.log))
+// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+reportWebVitals();
