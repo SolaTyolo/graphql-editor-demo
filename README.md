@@ -1,2 +1,1 @@
-- [x] export schema.gpl
-- [x] import github file
+- [  ] import from vercel serverless

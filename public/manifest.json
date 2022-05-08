@@ -1,6 +1,6 @@
 {
-  "short_name": "Metadata Editor",
-  "name": "Create Metadata Templator",
+  "short_name": "Graphql Editor",
+  "name": "Create Graphql Schema",
   "icons": [
     {
       "src": "favicon.ico",
