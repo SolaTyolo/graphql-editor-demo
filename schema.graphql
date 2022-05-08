@@ -1,7 +1,18 @@
 type Pizza{
-  name:String;
+	name: String
 }
 
 type Query{
 	pizzas: [Pizza!]
+}
+
+
+
+
+
+
+
+
+schema{
+	query: Query
 }
