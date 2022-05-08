@@ -1,0 +1,50 @@
+
+"""
+# 用户
+"""
+type User {
+	"""
+	# 名称
+	"""
+	name: String
+	"""
+	# 年龄
+	"""
+	age: String
+	"""
+	# 用户拥有的订单
+	"""
+	orders: [Order]
+}
+
+"""
+# 订单
+"""
+type Order {
+	name: String
+	"""
+	# 订单编号
+	"""
+	code: String
+	"""
+	# 订单的明细
+	"""
+	items: [Goods]
+}
+
+"""
+# 商品
+"""
+type Goods {
+	"""
+	# 名称
+	"""
+	name: String
+	"""
+	# 个数
+	"""
+	count: Int
+	spu: String
+	sku: String
+}
+
