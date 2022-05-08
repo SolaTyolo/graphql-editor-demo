@@ -41,8 +41,8 @@ export const Export = () => {
       <div 
         style={{
             position: "absolute",
-            bottom: "10px",
-            left: "10px",
+            bottom: "50px",
+            left: "14px",
             zIndex: 100
         }}>
         <a onClick={handleExportClick} >
