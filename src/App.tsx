@@ -14,11 +14,8 @@ export const App = () => {
     libraries: '',
   };
 
-  // load from github raw filepath
-  // export 
   try {
-    const gqlEditorSchema: string | null = localStorage.getItem('gqlEditorSchema');
-
+    const gqlEditorSchema: string | null = localStorage.getItem('gqlEditorSchema');    
     if (gqlEditorSchema) {
       defaultGqlEditorSchema = JSON.parse(gqlEditorSchema);
       console.log('Schema loaded from local storage.');
@@ -28,7 +25,6 @@ export const App = () => {
   }
 
   const [gqlEditorSchema, setGqlEditorSchema] = useState<PassedSchema>(defaultGqlEditorSchema);
-
   useEffect(() => {
     localStorage.setItem('gqlEditorSchema', JSON.stringify(gqlEditorSchema));
     console.log('Schema saved to local storage.');
