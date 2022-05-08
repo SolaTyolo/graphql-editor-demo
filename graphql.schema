@@ -1,0 +1,7 @@
+type Pizza{
+  name:String;
+}
+
+type Query{
+	pizzas: [Pizza!]
+}
